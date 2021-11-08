@@ -1,4 +1,6 @@
 :root {
+  /* 자주쓰는 설정 변수로 정의해둔 팔레트 */
+
   /* color */
   --color-black: #3f454d;
   --color-white: #ffffff;
@@ -6,8 +8,134 @@
   --color-yellow: #fbbe28;
   --color-pink: #fd7f84;
   --color-light-grey: #dfdfdf;
+
+  /* size */
+  --base-space: 8px;
+  --size-button: 60px;
+  --size-border: 4px;
+  --font-size: 18px;
+  --size-thumbnail: 50px;
+
+  /* animation */
+  --animation-duration: 300ms;
 }
 
-* {
+body {
+  height: 100vh;
+  /* 전체 화면 크기로 높이 지정 */
+
+  background-color: var(--color-black);
+  display: flex;
+
+  flex-direction: column;
+  /* 한  줄에 한 아이템씩 */
+
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  cursor: pointer;
+  /* 아 클릭할 수 있는 애구나~ 커서 설정 */
+
+  transition: transform var(--animation-duration) ease;
+  /* 스무스한 효과 */
+}
+
+.logo:hover,
+.btn:hover {
+  transform: scale(1.1);
+  /* 마우스가 올라갔을 때 사이즈 변화를 주자 */
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  /* 반대축 중심으로 가운데 정렬 */
+}
+.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  /* 투명 배경 버튼 촌스러운 스타일링 제거해준 것 */
+
+  cursor: pointer;
+  transition: transform var(--animation-duration) ease;
+
+  margin-right: var(--base-space);
+  /* 버튼 간격 넓히기 */
+}
+
+.imgBtn {
+  width: var(--size-button);
+  height: var(--size-button);
+}
+
+.colorBtn {
+  font-size: var(--font-size);
+  padding: calc(var(--base-space) * 2);
+  /* 버튼 크기 패딩으로 키우기 */
+
+  border-radius: var(--size-border);
+  /* 모서리 둥글게 */
+
+  margin-bottom: calc(var(--base-space) / 1.5);
+}
+
+.blue {
+  background-color: var(--color-blue);
+}
+
+.yellow {
+  background-color: var(--color-yellow);
+}
+
+.pink {
+  background-color: var(--color-pink);
+}
+
+.color * {
   box-sizing: border-box;
+}
+.items {
+  /* js로 애니메이션 넣을 거지만, 컨테이너 스타일링 위해 임의로 */
+  /* background-color: whitesmoke; */
+
+  width: 60%;
+  height: 60%;
+  /* 아이템의 갯수와 상관없이 고정된 크기 설정 */
+
+  list-style: none;
+  /* 기본값으로 들어가는 점 없애주기 */
+
+  padding-left: 0;
+  /* 기본으로 들어가있던 패딩값 없이주기 */
+
+  overflow-y: scroll;
+  /* 리스트 콘테이너에 스크롤 주기 */
+}
+
+.item {
+  background-color: var(--color-white);
+
+  display: flex;
+  align-items: center;
+
+  padding: var(--base-space);
+
+  margin-bottom: var(--base-space);
+  /* 아이템이 여러 개 생겼을 때 간격 만들어주기 */
+}
+
+.item_thumbnail {
+  width: var(--size-thumbnail);
+  height: var(--size-thumbnail);
+  /* 리스트 속 아이템 크기 설정*/
+}
+
+.item_description {
+  margin-left: var(--base-space);
+  /* 썸네일과 간격 주기 */
+
+  font-size: var(--font-size);
 }
