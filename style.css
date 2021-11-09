@@ -94,9 +94,6 @@ body {
   background-color: var(--color-pink);
 }
 
-.color * {
-  box-sizing: border-box;
-}
 .items {
   /* js로 애니메이션 넣을 거지만, 컨테이너 스타일링 위해 임의로 */
   /* background-color: whitesmoke; */
@@ -139,3 +136,7 @@ body {
 
   font-size: var(--font-size);
 }
+
+/* .color * {
+  box-sizing: border-box;
+} */
