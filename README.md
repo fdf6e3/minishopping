@@ -40,5 +40,7 @@
 ### JavaScript
 
 - [fetch()](https://mzl.la/3bWY3zH): data json 불러오기
-- DOM 복습 필요 → upadted [study_FE_notes JavaScript](https://bit.ly/3DfiDY0)
+- DOM → upadted [study_FE_notes JavaScript](https://bit.ly/3DfiDY0)
 - [Event Listener](https://mzl.la/3kqLH7Q)
+- [Array APIs](https://github.com/fdf6e3/study_FE_notes/blob/main/JavaScript.md#-javascript-array-apis) ex.join(), filter()
+- 함수 인자는 필요한 최소한의 범위를 받아오게끔 하는 것이 효율적
